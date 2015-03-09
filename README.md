@@ -1,2 +1,5 @@
 # SAKoTools
-Server tools for SAKo system
+SAKoTools
+=========
+
+Pomocná knihovna pro tvorbu validátorů v systému SAKo.
