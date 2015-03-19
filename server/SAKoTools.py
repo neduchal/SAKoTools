@@ -37,8 +37,11 @@ def getMethodInModule(dir, module, method):
     dir = "../" + os.path.dirname(dir[2:]) + "/"
     path_to_script = os.path.dirname(os.path.abspath(__file__))
     sys.path.append(os.path.join(path_to_script, dir))
-    m = __import__(module)
-    method = getattr(m, method)
+    try:
+        m = __import__(module)
+        method = getattr(m, method)
+    except:
+        return None
     return method
 
 
